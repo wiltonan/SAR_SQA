@@ -1,0 +1,17 @@
+
+Tabla datos_analsita:
+
+dts.Direccion
+dts.Telefono
+dts.Celular
+
+
+Tabla experiencia laboral:
+
+el.Contacto
+el.Meses_Experiencia
+
+
+Tabla estudio:
+es.Tarjeta_Profesional
+

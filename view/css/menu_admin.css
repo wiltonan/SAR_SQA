@@ -1,0 +1,203 @@
+#menu{
+  top: 0px;
+  width: 100%;
+  position: absolute;
+  background: #0B53B7;
+  height: 80px;
+  text-decoration: none;
+}
+.form-horizontal .form-group{
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.inicio{
+position: absolute;
+font-size: 25px;
+top: 25px;
+}
+
+.inicio > a{
+	color: black;
+	text-decoration: none;
+}
+.inicio > i{
+	color: green;
+}
+
+.inicio > i > a {
+  color: black;
+  text-decoration: none;
+}
+
+
+.menu{
+position: absolute;
+font-size: 25px;
+left: 8%;
+top: 25px;
+}
+
+.menu > a{
+	color: black;
+	text-decoration: none;
+}
+.menu > i{
+	color: green;
+}
+
+.sesion{
+position: absolute;
+font-size: 20px;
+left: 90%;
+top: 25px;
+}
+
+.sesion > a{
+	color: black;
+	text-decoration: none;
+}
+/*este esta pendiente ya que no hacen ningun cambio*/
+.dropdown-menu {
+  position: absolute;
+  list-style: none;
+  font-size: 14px;
+  background-color: #F9AD3B;
+  border-radius: 10 10 10 10px;
+}
+
+.dropdown-menu .dropdown-menu {
+  display: none;
+  list-style: none;
+  opacity: 0;
+  background-color: #F9AD3B;
+  border-radius: 10 10 10 10px;
+}
+
+@media (min-width: 0px) {
+    /*lista despegable*/
+    .dropdown-menu {
+    margin-top: 60px;
+    margin-left: 12%;
+    visibility: hidden;
+    float: left;
+    display: block;
+    min-width: 100px;
+    padding: 5px 0;
+    opacity: 0;
+  }
+    /*mover sub lista*/
+  .dropdown-menu:before{
+    content: "";
+    position: absolute;
+    top: -22px;
+    left: 4.5%;
+    border-style: solid;
+    border-width: 11px;
+    border-color: transparent transparent #F9AD3B transparent;
+  }
+    /**sub menu no cambiar nada*/
+  .dropdown-menu .dropdown-menu {
+    display: block;
+    float: left;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .dropdown-menu .dropdown:hover > .dropdown-menu {
+    opacity: 1;
+    top: -65px;
+    left: 92%;
+    padding: 5px 0;
+    visibility: visible;
+  }
+
+    /*no cambiuar nada*/
+  .dropdown-menu .dropdown-menu:before{
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 7px;
+    border-style: solid;
+    border-width: 10px;
+    border-color: transparent #FAA322 transparent transparent;
+  }
+    /*no cambiar nada*/
+  .dropdown:hover > .dropdown-menu {
+    opacity: 1 ;
+    visibility: visible ;
+  }
+    /*no cambiar nada*/
+  
+  .navbar-right .dropdown-menu {
+    left: auto;
+    right: 0;
+  }
+  .navbar-right .dropdown-menu:before{
+    position: absolute;
+    left: auto;
+    right: 70%;
+    border-color: transparent transparent #FAA322 transparent;
+  }
+  .navbar-collapse {
+    width: 2000px;
+  }
+  .navbar-collapse.collapse {
+    display: block !important;
+    height: auto !important;
+    padding-bottom: 0;
+    overflow: visible !important;
+  }
+  .navbar-collapse.in {
+    overflow-y: visible;
+  }
+
+  .navbar-fixed-top .navbar-collapse,
+  .navbar-static-top .navbar-collapse,
+
+  .navbar-fixed-bottom .navbar-collapse {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  argin-left: 0;
+  }
+
+  .navbar-nav {
+    float: left;
+    margin: 0 !important;
+  }
+  .navbar-nav > li {
+    float: left;
+  }
+/*tamaño menu*/
+  .navbar-nav > li > a {
+    padding-top: 25px !important;
+    padding-bottom: 30px !important;
+  }
+  .navbar-nav.navbar-right:last-child {
+    margin-right: -15px;
+  }
+  .navbar-right {
+    float: right !important;
+  }
+}
+
+.dropdown-menu > li {
+  position: relative;
+}
+
+.dropdown-menu > li > a {
+  display: block;
+  color: #fff;
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus,
+
+/*lista submenu no tocar */
+.dropdown-menu > .active > a:focus {
+  background: #FE9627;
+  color: #fff;
+}
+
+/*------------------------------------------------------------------------------------------*/

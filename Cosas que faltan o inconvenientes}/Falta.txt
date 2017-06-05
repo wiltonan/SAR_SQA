@@ -1,0 +1,3 @@
+------------------------------------ 28/04/2017 ---------------------------------------
+
+2) buscar la forma de apliar el cuadro cuando el dato traido sea muy grande.

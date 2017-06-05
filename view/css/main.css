@@ -1,0 +1,28 @@
+#logo{
+	width: 60vh;
+	display:block;
+	margin:auto;
+}
+
+
+#bglog{
+	border-radius: 10px;
+	background-color: white;
+	width: 35%;
+	height: 230px;
+	margin: auto;
+	padding: 15px 30px;
+}
+
+
+
+footer{
+	text-align: center;
+	background-color: ;
+	height: 60px;
+	margin-bottom: 0px;
+	padding: 10px;
+}
+button{
+	margin-left: 25%;
+}

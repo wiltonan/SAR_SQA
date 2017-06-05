@@ -1,0 +1,53 @@
+.prsnls{
+	margin-top: 90px;
+}
+
+/*Aqui inicia la experiencia laboral*/
+.xprnc_lbrl{
+	font-size: 40px;
+}
+.btn_lbrl{
+	padding: 6px 40px;
+}
+/*Aqui termina la experiencia laboral*/
+
+.std{
+	font-size: 40px;
+}
+.rgstrr_hj_vd{
+	font-size: 40px;
+}
+/*Inicio crear hoja de vida*/
+.crr_cv > form > .card > .row > center > h2{
+	font-size: 30px;
+}
+.crr_cv{
+	margin-top: 90px;
+	padding: 0px 20px 0px 20px;
+}
+/*termina crear hoja de vida*/
+
+/*la tabla donde se van a consultar inicio */
+.mtbl{
+	padding: 0px 20px 0px 20px;
+	margin: center;
+}
+.nfrmcn_prsnl{
+	font-size: 35px;
+}
+/*la tabla donde se van a consultar fin*/
+
+.consultar{
+	margin-top: 90px;
+}
+.crr_sr{
+	margin-top: 90px;
+	padding: 0px 50px 0px 50px;
+}
+.cdmc{
+	margin-top: 90px;
+}
+.lbrl{
+	margin-top: 90px;
+}
+
