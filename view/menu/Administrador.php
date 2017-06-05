@@ -20,7 +20,7 @@
   <link rel="stylesheet" type="text/css" href="../css/datepicker.css">
     <link rel="stylesheet" type="text/css" href="../css/HorasExtras1.css">
 	</head>
-	<body style="background: #bbdefb;"  >
+	<body >
 		<div class="el_menu" style="background-color: green;">
 			<header class="navar">
 				<div id="menu">
