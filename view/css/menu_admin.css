@@ -127,7 +127,7 @@ top: 25px;
     visibility: visible ;
   }
     /*no cambiar nada*/
-  
+
   .navbar-right .dropdown-menu {
     left: auto;
     right: 0;
@@ -200,4 +200,10 @@ top: 25px;
   color: #fff;
 }
 
-/*------------------------------------------------------------------------------------------*/
+#dos{
+	position: relative;
+	width:1000px;
+	height: 500px;
+	left: 160px;
+  top: -120px;
+}/*------------------------------------------------------------------------------------------*/
