@@ -5,11 +5,12 @@
           <div class="col-md-4 col-md-offset-4">
               <div class="login-panel panel panel-warning">
                   <div class="panel-heading">
+                    <h2>Cargar archivo</h2>
                   </div>
                               <div class="form-group">
                              <input type="file" id="csv" name="csv" />
                             </div>
-                            <input type="submit" value="Importar"/>
+                            <button type="submit" class="btn btn-warning">importar archivo</button>
                               <div class="" id="respuesta">
                               </div>
               </div>

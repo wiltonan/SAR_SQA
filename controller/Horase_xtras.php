@@ -30,7 +30,7 @@
 			try {
 				ejemplo::Modificar_cliente($Gerente_Proyecto, $Nombre_Cliente, $Hora_Inicio, $Hora_Fin, $Horas_Laboradas, $actualizar);
 				echo "<script>alert('esta actualizado  ".$Gerente_Proyecto." con exito');
-						 self.location.href='../sections/Consultar_Cliente.php';
+						 self.location.href='../sections/Actualizar_cliente.php';
 					</script>";
 			} catch (Exception $e) {
 				echo "Se ha producido un error" .$e;
