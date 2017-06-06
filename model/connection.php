@@ -1,9 +1,9 @@
 <?php
 class ConexionBD{
-	private static $dbhost="localhost";
-	private static $dbname="sqa1";
-	private static $dbuser="root";
-	private static $dbpass="";
+	private static $dbhost="localhost";//host
+	private static $dbname="sqa1";//nombre de la base de datos
+	private static $dbuser="root";//usuario
+	private static $dbpass="";//password
 
 	private static $conn=null;
 
