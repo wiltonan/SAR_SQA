@@ -1,13 +1,13 @@
 
 <?php
 	require_once '../../model/connection.php';
-	require_once '../../model/ejemplo.php';
+	require_once '../../model/horas_extras.php';
 
-	$actualizar=ejemplo::Modificar_cliente($_GET["actualizar"]);
+	$actualizar=horas_extras::Modificar_cliente($_GET["actualizar"]);
 ?>
 
 <div class="actcliente01">
-	<form method="post"  action="../../controller/Horase_xtras.php">
+	<form method="post"  action="../../controller/Horas_extras.php">
 		<br><br><br>
 				<h1>Actualizar cliente</h1>
 				<label>Gerente Proyectos:</label><br>

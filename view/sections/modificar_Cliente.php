@@ -1,7 +1,7 @@
 <?php
 require_once '../../model/connection.php';
-require_once '../../model/ejemplo.php';
-$hola=ejemplo::hacer_una_consulta($_GET["Actualizar_cliente"]);
+require_once '../../model/horas_extras.php';
+$hola=horas_extras::hacer_una_consulta($_GET["Actualizar_cliente"]);
 ?>
 <div class="cosa">
   <form action="../../controller/Horase_xtras.php" method="post">

@@ -2,7 +2,7 @@
 	//se enlanza la conexion d la base de datos
 	require_once '../model/connection.php';
 	//se enlanza las consultas
-	require_once '../model/ejemplo.php';
+	require_once '../model/horas_extras.php';
 	//declarar la variable para enviar en los formularioos
 	$actual=$_REQUEST['actual'];
 	//swicth para declarar los parametro
@@ -14,7 +14,7 @@
 			$Hora_Fin=$_POST['Hora_Fin'];
 			$Horas_Laboradas=$_POST['Horas_Laboradas'];
 			try {
-				ejemplo::registrarcliente($Gerente_Proyecto, $Nombre_Cliente, $Hora_Inicio, $Hora_Fin, $Horas_Laboradas);
+				horas_extras::registrarcliente($Gerente_Proyecto, $Nombre_Cliente, $Hora_Inicio, $Hora_Fin, $Horas_Laboradas);
 				echo "<script>alert('el registro de ".$Gerente_Proyecto."con exito');
 						 self.location.href='../view/menu/Consultar_Cliente.php';
 					</script>";
@@ -32,7 +32,7 @@
 			$actualizar=$_POST['Id_Cliente'];
 
 			try {
-				ejemplo::Modificar_cliente($Gerente_Proyecto, $Nombre_Cliente, $Hora_Inicio, $Hora_Fin, $Horas_Laboradas, $actualizar);
+				horas_extras::Modificar_cliente($Gerente_Proyecto, $Nombre_Cliente, $Hora_Inicio, $Hora_Fin, $Horas_Laboradas, $actualizar);
 				echo "<script>alert('esta actualizado  ".$Gerente_Proyecto." con exito');
 						 self.location.href='../sections/Actualizar_cliente.php';
 					</script>";
@@ -48,7 +48,7 @@
 			$Empresa_Contratante=$_POST['Empresa_Contratante'];
 
 			try {
-				ejemplo::RegistrarRecargo($Fecha,$Cantidad_Horas,$Comentario,$Empresa_Contratante,$Descripcion,$Descripcion1);
+				horas_extras::RegistrarRecargo($Fecha,$Cantidad_Horas,$Comentario,$Empresa_Contratante,$Descripcion,$Descripcion1);
 				echo "<script>alert('el registro de ".$Fecha." con exito');
 						 self.location.href='../sections/Consulta_Analista.php';
 					</script>";
@@ -59,7 +59,7 @@
 
 		case 'Extras':
 			try {
-				ejemplo::Extras($Fecha, $Cantidad_Horas);
+				horas_extras::Extras($Fecha, $Cantidad_Horas);
 				echo "<script>alert('el registro de ".$Cantidad_Horas." con exito');
 						 self.location.href='../sections/Consulta_Analista.php';
 					</script>";
@@ -82,7 +82,7 @@
 		$Extras=$_POST['Extras'];
 
 		try {
-			ejemplo::temporal($Proyecto,$Fecha,$Analista,$Actividad_Rh,$Actividad,$Comentario,$Horas,$Empresa_Contrata,$ciudad,$Extras);
+			horas_extras::temporal($Proyecto,$Fecha,$Analista,$Actividad_Rh,$Actividad,$Comentario,$Horas,$Empresa_Contrata,$ciudad,$Extras);
 			echo "<script>alert('el registro de ".$Fecha." con exito');
 					 self.location.href='../sections/importar_archivo.php';
 				</script>";

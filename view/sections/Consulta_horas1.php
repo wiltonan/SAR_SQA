@@ -1,9 +1,9 @@
 <?php
 require_once '../../model/connection.php';
-require_once '../../model/ejemplo.php';
-$generar = ejemplo::Consulta_Horas($_GET["Consulta"]);
-$recargo = ejemplo::recargo1();
-$extras = ejemplo::Extras();
+require_once '../../model/horas_extras.php';
+$generar = horas_extras::Consulta_Horas($_GET["Consulta"]);
+$recargo = horas_extras::recargo1();
+$extras = horas_extras::Extras();
  ?>
  <script type="text/javascript">
      function atras(a) {
@@ -11,7 +11,7 @@ $extras = ejemplo::Extras();
     }
  </script>
     <div class="tblhoras" style="margin-top:100px;">
- <form  action="../../controller/Horase_xtras.php" method="post">
+ <form  action="../../controller/horas_extras.php" method="post">
       <center>
       <a  href="../sections/formatohoras.php?Consulta=<?php echo $ver[0];?>" target="blank">descargar</a></button>
       <br>

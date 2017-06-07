@@ -1,6 +1,6 @@
       <div class="rgscliente">
 
-        <form action="../../controller/Horase_xtras.php" method="post">
+        <form action="../../controller/horas_extras.php" method="post">
 
           <div class="col-md-9 col-md-4" id="regcliente" style="margin-top:150px;">
             <center>

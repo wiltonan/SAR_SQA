@@ -1,10 +1,10 @@
 <?php
 require_once '../../model/connection.php';
-require_once '../../model/ejemplo.php';
-  $ver = ejemplo::Consulta_Horas($_GET["registro"]);
-  $generar = ejemplo::Consulta_Horas($_GET["Consulta"]);
-  $recar = ejemplo::recargo();
-  $pag = ejemplo::pagas();
+require_once '../../model/horas_extras.php';
+  $ver = horas_extras::Consulta_Horas($_GET["registro"]);
+  $generar = horas_extras::Consulta_Horas($_GET["Consulta"]);
+  $recar = horas_extras::recargo();
+  $pag = horas_extras::pagas();
 ?>
      <script type="text/javascript">
          function atras(a) {
@@ -13,7 +13,7 @@ require_once '../../model/ejemplo.php';
      </script>
      <h2 id="recar">Registrar recargo</h2>
 <div id="recargo">
-   <form class="container" action="../../controller/Horase_xtras.php" method="POST">
+   <form class="container" action="../../controller/horas_extras.php" method="POST">
           <br><br>
 
           			<article >
