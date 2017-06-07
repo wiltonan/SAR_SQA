@@ -1,10 +1,10 @@
 <?php
 require_once '../../model/connection.php';
 require_once '../../model/horas_extras.php';
-$hola=horas_extras::hacer_una_consulta($_GET["Actualizar_cliente"]);
+$hola=Horas_Extras::hacer_una_consulta($_GET["Actualizar_cliente"]);
 ?>
 <div class="cosa">
-  <form action="../../controller/Horase_xtras.php" method="post">
+  <form action="../../controller/Horas_extras.php" method="post">
             <input type="hidden" value="<?php echo $hola["Id_Cliente"]; ?>"  name="Id_Cliente">
             <label>Gerente Proyectos:</label><br>
                   <input name="Gerente_Proyecto"  rows="10"  value="<?php echo $hola["Gerente_Proyecto"]; ?>" /><br>

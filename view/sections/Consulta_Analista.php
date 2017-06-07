@@ -2,8 +2,8 @@
 require_once '../../model/connection.php';
 require_once '../../model/horas_extras.php';
 
-$sth=horas_extras::Consulta_Analis();
-$generar = horas_extras::Consulta_Horas($_GET["Consulta"]);
+$sth=Horas_Extras::Consulta_Analis();
+$generar = Horas_Extras::Consulta_Horas($_GET["Consulta"]);
  ?>
  <script type="text/javascript">
       function Consulta(c) {

@@ -3,7 +3,7 @@ require_once '../../model/connection.php';
   require_once '../../model/horas_extras.php';
   require ('../plugins/pdf/fpdf.php');
 
-  $generar = horas_extras::GenerarPDF($_GET["Consulta"]);
+  $generar = Horas_Extras::GenerarPDF($_GET["Consulta"]);
           	class PDF extends FPDF
           	{
           		// Cabecera de página, mejor dicho la parte del titulo

@@ -1,7 +1,7 @@
 <?php
 require_once '../../model/connection.php';
 require_once '../../model/horas_extras.php';
-$sth=horas_extras::Consulta_cliente();
+$sth=Horas_Extras::Consulta_cliente();
  ?>
  <script type="text/javascript">
       function modificar_Cliente(modificar_Cliente) {

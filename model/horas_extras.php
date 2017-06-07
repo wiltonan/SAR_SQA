@@ -1,5 +1,5 @@
 <?php
-class horas_extras
+class Horas_Extras
 {
   // ---------------------------------------------------------------------------------------------------
     public static function Consulta_Analis(){

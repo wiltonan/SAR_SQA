@@ -1,10 +1,10 @@
 <?php
 require_once '../../model/connection.php';
 require_once '../../model/horas_extras.php';
-  $ver = horas_extras::Consulta_Horas($_GET["registro"]);
-  $generar = horas_extras::Consulta_Horas($_GET["Consulta"]);
-  $recar = horas_extras::recargo();
-  $pag = horas_extras::pagas();
+  $ver = Horas_Extras::Consulta_Horas($_GET["registro"]);
+  $generar = Horas_Extras::Consulta_Horas($_GET["Consulta"]);
+  $recar = Horas_Extras::recargo();
+  $pag = Horas_Extras::pagas();
 ?>
      <script type="text/javascript">
          function atras(a) {

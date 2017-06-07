@@ -3,7 +3,7 @@
 	require_once '../../model/connection.php';
 	require_once '../../model/horas_extras.php';
 
-	$actualizar=horas_extras::Modificar_cliente($_GET["actualizar"]);
+	$actualizar=Horas_Extras::Modificar_cliente($_GET["actualizar"]);
 ?>
 
 <div class="actcliente01">
