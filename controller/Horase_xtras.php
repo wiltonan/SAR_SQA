@@ -3,7 +3,9 @@
 	require_once '../model/connection.php';
 	//se enlanza las consultas
 	require_once '../model/ejemplo.php';
+	//declarar la variable para enviar en los formularioos
 	$actual=$_REQUEST['actual'];
+	//swicth para declarar los parametro
 	switch ($actual) {
 		case 'rgstrr_cliente':
 			$Gerente_Proyecto=$_POST['Gerente_Proyecto'];
