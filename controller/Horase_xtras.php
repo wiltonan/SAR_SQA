@@ -1,5 +1,7 @@
 <?php
+	//se enlanza la conexion d la base de datos
 	require_once '../model/connection.php';
+	//se enlanza las consultas
 	require_once '../model/ejemplo.php';
 	$actual=$_REQUEST['actual'];
 	switch ($actual) {
