@@ -35,13 +35,13 @@
     public static function crr_cv($car, $rol, $dire_docu, $usua){
       $pdo = ConexionBD::AbrirBD();
       $pdo -> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-      
+
       $sql="INSERT INTO datos_analista(Id_Cargo, Id_Rol, Ruta_Anexos,Id_Usuario)values(?,?,?,?)";
 
       $query = $pdo->prepare($sql);
       $query -> execute(array($car,$rol,$dire_docu,$usua));
 
-      ConexionBD::CerrarBD();    
+      ConexionBD::CerrarBD();
     }
 
      public static function crr_sr($tip_docu,$privilegio,$cedu,$lugar_expedicion,$nick,$contra,$correo,$est){
@@ -53,7 +53,7 @@
       $query = $pdo->prepare($sql);
       $query -> execute(array($tip_docu,$privilegio,$cedu,$lugar_expedicion,$nick,$contra,$correo,$est));
 
-      ConexionBD::CerrarBD();    
+      ConexionBD::CerrarBD();
     }
 
     public static function mstrr_tp_dcmnt(){
@@ -141,7 +141,7 @@
       $pdo -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
       $sql = "SELECT dts.Id_Datos, dts.Nombres, dts.Apellidos, dts.Telefono, dts.Celular, dts.Ruta_Anexos, u.Num_Documento, tp.Descripcion, cl.Nombre_Cliente
         FROM datos_analista dts
-        
+
         LEFT JOIN cliente cl
         ON dts.Id_Cliente = cl.Id_Cliente
 
@@ -191,9 +191,9 @@
             ON dts.Id_Usuario = u.Id_Usuario
 
             INNER JOIN tipo_documento tp
-            ON u.Id_Tipo_Documento = tp.Id_Tipo_Documento 
+            ON u.Id_Tipo_Documento = tp.Id_Tipo_Documento
 
-            WHERE dts.Nombres OR u.Num_Documento  
+            WHERE dts.Nombres OR u.Num_Documento
 
             LIKE CONCAT('%',?,'%') ";
 
@@ -283,7 +283,7 @@
         $query = $pdo -> prepare($sql);
         $query -> execute(array($usuario));
 
-        
+
         $result = $query -> fetchAll(PDO::FETCH_BOTH);
 
         ConexionBD::CerrarBD();
@@ -420,7 +420,7 @@
     public static function prsnl($nombres, $apellidos,  $telefono, $celular, $cod){
       $pdo = ConexionBD::AbrirBD();
       $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-      
+
       $sql="UPDATE datos_analista SET Nombres= ?, Apellidos= ?, Telefono=?, Celular=? WHERE datos_analista.Id_Datos = ?";
 
       $query= $pdo->prepare($sql);
@@ -432,10 +432,10 @@
      public static function cnslt_ms_dts($codigo){
       $pdo = ConexionBD::AbrirBD();
       $pdo -> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-      
+
       $sql="SELECT da.Nombres, da.Apellidos, da.Telefono, da.celular, da.Ruta_Anexos, td.Descripcion, u.Num_Documento, da.Id_Usuario, u.Id_Tipo_Documento, td.Id_Tipo_Documento
 
-        FROM datos_analista da 
+        FROM datos_analista da
 
         INNER JOIN usuario u
         ON da.Id_Usuario = u.Id_Usuario
@@ -495,7 +495,7 @@
       $pdo = ConexionBD::AbrirBD();
       $pdo -> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
-      $sql="SELECT e.Id_Datos, e.Id_Sector, e.Empresa, e.Cargo FROM experiencia_laboral e 
+      $sql="SELECT e.Id_Datos, e.Id_Sector, e.Empresa, e.Cargo FROM experiencia_laboral e
       WHERE e.Id_Datos = ? And e.Id_Sector=? And e.Empresa = ? And e.Cargo=?";
 
       $query = $pdo->prepare($sql);
@@ -513,7 +513,7 @@
       $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
        $sql="INSERT INTO experiencia_laboral(Id_Datos, Id_Sector, Trabaja_en_empresa, Empresa, Cargo, Fecha_Inicio, Fecha_Fin,  Meses_Experiencia, Contacto) values(?,?,?,?,?,?,?,?,?)";
-      
+
       $query= $pdo->prepare($sql);
       $query->execute(array($cod, $sector, $es_sqa, $empresa, $cargo, $fecha_inicip, $fecha_fin, $meses_experi, $celu_conta));
 
@@ -534,18 +534,18 @@
       ConexionBD::CerrarBD();
 
       return $result;
-    }  
+    }
 
      public static function estudio($cod, $tipo_estudio, $titulo_obtenido, $institucion, $fecha_inicio, $fecha_fin, $obsevacion, $tarjeta_profesional, $nivel){
       $pdo = ConexionBD::AbrirBD();
       $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
        $sql="INSERT INTO estudio(Id_Datos, Id_tipo_Estudio, Titulo, Institucion, Fecha_Inicio, Fecha_Fin, Observaciones, Tarjeta_Profesional, Nivel) values(?,?,?,?,?,?,?,?,?)";
-      
+
       $query= $pdo->prepare($sql);
       $query->execute(array($cod, $tipo_estudio, $titulo_obtenido, $institucion, $fecha_inicio, $fecha_fin, $tarjeta_profesional, $obsevacion, $nivel));
 
       ConexionBD::CerrarBD();
-    }   
+    }
   }
 ?>
