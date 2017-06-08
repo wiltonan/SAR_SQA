@@ -72,7 +72,7 @@
 							<ul class="dropdown-menu">
                 <li id="cargararchivo">
                   <a href="#/cargararchivo">
-                    <i class="fa fa-search" aria-hidden="true"></i>
+                    <i class="fa fa-road" aria-hidden="true"></i>
                     &nbsp;Cargar archivo
                   </a>
                 </li>
