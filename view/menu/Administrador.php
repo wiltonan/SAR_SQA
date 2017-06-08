@@ -102,19 +102,8 @@
                   </a>
                 </li>
 
-                <li id="Consulta_Horas">
-                  <a href="#/Consulta_Horas">
-                    <i class="fa fa-search" aria-hidden="true"></i>
-                    &nbsp;Consultar Horas
-                  </a>
-                </li>
 
-                <li id="registrorecargo">
-                  <a href="#/registrorecargo">
-                    <i class="fa fa-plus" aria-hidden="true"></i>
-                    &nbsp;Registro recargo
-                  </a>
-                </li>
+
 
 								<li id="consultar_cliente">
 									<a href="#/consultar_cliente">
@@ -127,34 +116,6 @@
 									<a href="#/Registrar">
 										<i class="fa fa-plus" aria-hidden="true"></i>
 										&nbsp;Registrar cliente
-									</a>
-								</li>
-
-								<li id="actualizar">
-									<a href="#/actualizar">
-										<i class="fa fa-plus" aria-hidden="true"></i>
-										&nbsp;Actualizar cliente
-									</a>
-								</li>
-
-								<li>
-									<a href="">
-										<i class="fa fa-download" aria-hidden="true"></i>
-										&nbsp;Generar reporte
-									</a>
-								</li>
-
-								<li>
-									<a href="">
-										<i class="fa fa-check-square-o" aria-hidden="true"></i>
-										&nbsp;Aprobar/reprobar
-									</a>
-								</li>
-
-								<li>
-									<a href="">
-										<i class="fa fa-pencil" aria-hidden="true"></i>
-										&nbsp;Actualizar
 									</a>
 								</li>
 							</ul>
