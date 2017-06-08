@@ -1,10 +1,10 @@
-<?php 
+<?php
 	require_once '../../model/connection.php';
    	require_once '../../model/hoja_vida.php';
    	require_once '../plugins/tcpdf/tcpdf.php';
 
-   	$Mis_datos = hoja_vida::datos_personales($_GET["usuario"]);
-    $laboral = hoja_vida::datos_laborales($_GET["usuario"]);
+   	$Mis_datos= hoja_vida::datos_personales($_GET["usuario"]);
+    $laboral  = hoja_vida::datos_laborales($_GET["usuario"]);
     $estudioc = hoja_vida::datos_estudiosc($_GET["usuario"]);
     $estudiot = hoja_vida::datos_estudiost($_GET["usuario"]);
     $estudiop = hoja_vida::datos_estudiosp($_GET["usuario"]);
@@ -79,7 +79,7 @@ if ($Mis_datos) {
     $pdf->Cell(181,5,$perso[6]." ".$perso[5]." ".$perso[8],0,0,'C');
     $pdf->Ln(5);
 
-    $pdf->Cell(181,0,"____________________________________________________________________________________________",0,0,'C'); 
+    $pdf->Cell(181,0,"____________________________________________________________________________________________",0,0,'C');
     $pdf->Ln(10);
   }
 }
@@ -115,7 +115,7 @@ if ($estudioc) {
         $pdf->MultiCell(39, 5,$estu[2]."-".$estu[3], 0, 'L', 0, 0, '', '', true);
         $pdf->Ln(7);
 
-        $pdf->Cell(185,0,"____________________________________________________________________________________________",0); 
+        $pdf->Cell(185,0,"____________________________________________________________________________________________",0);
         $pdf->Ln(5);
       }
     }
@@ -124,7 +124,7 @@ if ($estudioc) {
   if ($laboral) {
     $pdf->Ln(3);
     $pdf->SetFont('', 'B', 12);
-    $pdf->SetTextColor(255,255,255);  
+    $pdf->SetTextColor(255,255,255);
     $pdf->SetFillColor(127, 179, 213);
     $pdf->Cell(181, 5,'EXPERIENCIA LABORAL', 0, 0, 'C', True);
     $pdf->Ln(10);
@@ -176,7 +176,7 @@ if ($estudioc) {
         $pdf->MultiCell(55, 5,$estu[1], 0, 'L', 0, 0, '', '', true);
         $pdf->MultiCell(39, 5,$estu[2]."-".$estu[3], 0, 'L', 0, 0, '', '', true);
         $pdf->Ln(5);
-        $pdf->Cell(185,0,"____________________________________________________________________________________________",0); 
+        $pdf->Cell(185,0,"____________________________________________________________________________________________",0);
         $pdf->Ln(5);
       }
     }
@@ -219,9 +219,9 @@ if ($estudioc) {
   }
 
   if ($estudioi) {
-    $pdf->Ln(3);  
+    $pdf->Ln(3);
     $pdf->SetTextColor(255,255,255);
-    $pdf->SetFillColor(127, 179, 213); 
+    $pdf->SetFillColor(127, 179, 213);
     $pdf->SetFont('', 'B', 12);
     $pdf->Cell(181,5,utf8_decode('PLATAFORMAS'),0,0, 'C', True);
     $pdf->Ln(5);
@@ -243,7 +243,7 @@ if ($estudioc) {
     }
   }
    $pdf->SetTextColor(255,255,255);
-    $pdf->SetFillColor(127, 179, 213); 
+    $pdf->SetFillColor(127, 179, 213);
     $pdf->SetFont('', 'B', 12);
     $pdf->Cell(181,5,utf8_decode('Anexos'),0,0, 'C', True);
 
