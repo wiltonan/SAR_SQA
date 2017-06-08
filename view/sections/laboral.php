@@ -16,10 +16,12 @@
     <div class="form-group">
       <input type="hidden" value="<?php echo $my_codigo; ?>" name="nd">
       <div class="col-xs-12 col-sm-6">
-        <input class="form-control inputs" type="text" id="2" name="mprs" placeholder="Empresa: (*)">
+        <label for="usr">Empresa (*)</label>
+        <input class="form-control inputs" type="text" id="2" name="mprs" placeholder="Empresa">
       </div>
 
       <div class="col-xs-12 col-sm-6">
+        <label for="usr">Sector (*)</label>
         <select class="form-control select" name="sctr" >
           <option value="crear">Sector</option>
           <?php foreach ($sctr as $sector) {
@@ -31,22 +33,26 @@
 
     <div class="form-group">
       <div class="col-xs-12 col-sm-6">
-        <input class="form-control inputs" type="text" id="3" name="crg" placeholder="Cargo: (*)">
+        <label for="usr">Cargo (*)</label>
+        <input class="form-control inputs" type="text" id="3" name="crg" placeholder="Cargo">
       </div>
 
       <div class="col-xs-12 col-sm-6">
-          <input class="form-control inputs" type="number" id="4" name="cllr" placeholder="Celular de contacto: (*)">
+        <label for="usr">contacto (*)</label>
+        <input class="form-control inputs" type="number" id="4" name="cllr" placeholder="Celular de contacto">
       </div>
     </div>
 
     <div class="form-group">
       <div class="col-xs-12 col-sm-6">
-        <input class="form-control inputs" type="text" id="5" autocomplete="off" name="fch_nc" placeholder="Fecha de inicio: (*)">
+        <label for="usr">Fecha inicio (*)</label>
+        <input class="form-control inputs" type="text" id="5" autocomplete="off" name="fch_nc" placeholder="Fecha inicio">
       </div>
 
-        <div class="col-xs-12 col-sm-6">
+      <div class="col-xs-12 col-sm-6">
+        <label for="usr">Trabaja actualmente en esta empresa: (*)</label>
         <select class="form-control select"  onchange="button()" id="0" name="sqa">
-          <option value="crear">Trabaja actualmente en esta empresa: (*)</option>
+          <option value="crear">Trabaja actualmente en esta empresa</option>
           <option value="Si">Si</option>
           <option value="No">No</option>                
         </select>
@@ -55,7 +61,8 @@
 
      <div class="form-group">
 
-      <div class="col-xs-12 col-sm-6">
+      <div class="col-xs-12 col-sm-6" id="11">
+        <label for="usr">Fecha fin (*)</label>
         <input class="form-control inputs" type="text" id="1" autocomplete="off" name="fch_fn" placeholder="Fecha fin: (*)">
       </div>
       <input type="hidden" name="mss_xprnc" id="6">
@@ -106,6 +113,7 @@ $( function() {
 
 $(document).ready(function(){
   document.getElementById("1").style.display = "none";
+  document.getElementById("11").style.display = "none";
   document.getElementById("2").style.display = "block";
   document.getElementById("3").style.display = "block";
   document.getElementById("4").style.display = "block";
@@ -115,13 +123,16 @@ $(document).ready(function(){
 function button(){
   var w = document.getElementById("0").value;
   if (w=="crear") {
+    document.getElementById("11").style.display = "none";
     document.getElementById("1").style.display = "none";
     document.getElementById("1").value="";
   }
   if (w == "No") {
+    document.getElementById("11").style.display = "block";
     document.getElementById("1").style.display = "block";
   }
   if (w=="Si") {
+    document.getElementById("11").style.display = "none";
     document.getElementById("1").style.display = "none";
     document.getElementById("1").value="";
   }
