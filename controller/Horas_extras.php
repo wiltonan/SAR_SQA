@@ -7,6 +7,7 @@
 	$actual=$_REQUEST['actual'];
 	//swicth para declarar los parametro
 	switch ($actual) {
+		/*envio de registro de cliente*/
 		case 'rgstrr_cliente':
 			$Gerente_Proyecto=$_POST['Gerente_Proyecto'];
 			$Nombre_Cliente=$_POST['Nombre_Cliente'];
@@ -23,6 +24,7 @@
 				echo "Se ha producido un error" .$e;
 			}
 		break;
+		/*envio de actualiacio de cliente */
 		case 'Modificar_cliente':
 			$Gerente_Proyecto=$_POST['Gerente_Proyecto'];
 			$Nombre_Cliente=$_POST['Nombre_Cliente'];
@@ -40,7 +42,6 @@
 				echo "Se ha producido un error" .$e;
 			}
 		break;
-
 		case 'RegistrarRecargo':
 			$Fecha=$_POST['Fecha'];
 			$Cantidad_Horas=$_POST['Cantidad_Horas'];
