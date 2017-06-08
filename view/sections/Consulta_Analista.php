@@ -24,7 +24,7 @@ $generar = Horas_Extras::Consulta_Horas($_GET["Consulta"]);
                       <td>
                         <br>
                           <button type="button"class="btn btn-warning" name="">Buscar</button>
-                          <button type="button" onclick="atras(<?php echo $my_codigo[1];?>)" class="btn btn-warning" name="button">Atras</button>
+                          <!-- <button type="button" onclick="atras(<?php echo $my_codigo[1];?>)" class="btn btn-warning" name="button">Atras</button> -->
 
                       </td>
                 </tr>
