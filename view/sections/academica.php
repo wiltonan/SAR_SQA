@@ -24,28 +24,28 @@
           }?>   
         </select>
       </div>
-   
+    
       <div class="col-xs-12 col-sm-6" id="21">
         <label for="usr">Titulo obtenido (*)</label>
         <input class="form-control inputs" id="1" type="text" placeholder="Titulo obtenido">
       </div>
 
-      <div class="col-xs-12 col-sm-6" d="29">
+      <div class="col-xs-12 col-sm-6" id="29">
         <label for="usr">Nombre de la plataforma (*)</label>
         <input class="form-control inputs" id="9" type="text" placeholder="Nombre de la plataforma">
       </div>
 
-      <div class="col-xs-12 col-sm-6" d="30">
-        <label for="usr">Nombre de la plataforma (*)</label>
+      <div class="col-xs-12 col-sm-6" id="30">
+        <label for="usr">Idioma (*)</label>
         <input class="form-control inputs" id="10" type="text" placeholder="Idioma">
       </div>
 
-      <div class="col-xs-12 col-sm-6" d="32">
+      <div class="col-xs-12 col-sm-6" id="32">
         <label for="usr">Descripcion (*)</label>
         <input class="form-control inputs" id="12" type="text" placeholder="Descripcion">
       </div>
 
-      <div class="col-xs-12 col-sm-6" d="31">
+      <div class="col-xs-12 col-sm-6" id="31">
         <label for="usr">Tema (*)</label>
         <input class="form-control inputs" id="11" type="text" placeholder="Tema">
         <input type="hidden" id="19" name="ttl_btnd">
@@ -53,34 +53,34 @@
     </div>
        
     <div class="form-group">
-        <div class="col-xs-12 col-sm-6" d="23">
+        <div class="col-xs-12 col-sm-6" id="23">
           <label for="usr">Fecha inicio (*)</label>
           <input class="form-control inputs" autocomplete="off" id="3" type="text" name="fch_nc" placeholder="Fecha inicio">
         </div>
 
-        <div class="col-xs-12 col-sm-6" d="26">
+        <div class="col-xs-12 col-sm-6" id="26">
           <label for="usr">Fecha fin (*)</label>
           <input class="form-control inputs" autocomplete="off" id="6" type="text" name="fch_fn" placeholder="Fecha fin">
         </div>        
     </div>
 
     <div class="form-group">
-      <div class="col-xs-12 col-sm-6" d="22">
+      <div class="col-xs-12 col-sm-6" id="22">
         <label for="usr">Institución (*)</label>
         <input class="form-control inputs" id="2" type="text" name="nsttcn" placeholder="Institución">
       </div>
         
-      <div class="col-xs-12 col-sm-6" d="24">
+      <div class="col-xs-12 col-sm-6" id="24">
         <label for="usr">Numero de la tarjeta profesional (*)</label>
         <input class="form-control inputs" id="4" type="text" name="tjt_prfsnl" placeholder="Numero de la tarjeta profesional">
       </div>
 
-      <div class="col-xs-12 col-sm-6" d="25">
+      <div class="col-xs-12 col-sm-6" id="25">
         <label for="usr">Software que maneja (*)</label>
         <input class="form-control inputs" id="5" type="text" name="bsrvcns" placeholder="Software que maneja">
       </div>
     
-      <div class="col-xs-12 col-sm-6" d="27">
+      <div class="col-xs-12 col-sm-6" id="27">
         <label for="usr">Nivel (*)</label>
         <input class="form-control inputs" id="7" type="number" name="nvl" placeholder="Nivel">
       </div>
@@ -130,16 +130,27 @@
 
 $(document).ready(function(){
   document.getElementById("1").style.display = "none";
+  document.getElementById("21").style.display = "none";
   document.getElementById("2").style.display = "none";
+  document.getElementById("22").style.display = "none";
   document.getElementById("3").style.display = "none";
+  document.getElementById("23").style.display = "none";
   document.getElementById("4").style.display = "none";
+  document.getElementById("24").style.display = "none";
   document.getElementById("5").style.display = "none";
+  document.getElementById("25").style.display = "none";
   document.getElementById("6").style.display = "none";
+  document.getElementById("26").style.display = "none";
   document.getElementById("7").style.display = "none";
+  document.getElementById("27").style.display = "none";
   document.getElementById("9").style.display = "none";
+  document.getElementById("29").style.display = "none";
   document.getElementById("10").style.display = "none";
+  document.getElementById("30").style.display = "none";
   document.getElementById("11").style.display = "none";
+  document.getElementById("31").style.display = "none";
   document.getElementById("12").style.display = "none";
+  document.getElementById("32").style.display = "none";
   document.getElementById("BtnRegistrar").style.display = "none";
 });
   
@@ -147,107 +158,185 @@ function button(){
   var w = document.getElementById("0").value;
   if (w==8) {
     document.getElementById("9").style.display = "block";
+    document.getElementById("29").style.display = "block";
     document.getElementById("5").style.display = "block";
+    document.getElementById("25").style.display = "block";
     document.getElementById("2").style.display = "block";
+    document.getElementById("22").style.display = "block";
     document.getElementById("3").style.display = "block";
+    document.getElementById("23").style.display = "block";
     document.getElementById("6").style.display = "block";
+    document.getElementById("26").style.display = "block";
     document.getElementById("BtnRegistrar").style.display = "block";
     document.getElementById("1").style.display = "none";
+    document.getElementById("21").style.display = "none";
     document.getElementById("4").style.display = "none";
+    document.getElementById("24").style.display = "none";
     document.getElementById("7").style.display = "none";
+    document.getElementById("27").style.display = "none";
     document.getElementById("10").style.display = "none";
+    document.getElementById("30").style.display = "none";
     document.getElementById("11").style.display = "none";
+    document.getElementById("31").style.display = "none";
     document.getElementById("12").style.display = "none";
+    document.getElementById("32").style.display = "none";
   }
 
   if (w==3 || w==4 || w==6) {
     document.getElementById("1").style.display = "block";
+    document.getElementById("21").style.display = "block";
     document.getElementById("2").style.display = "block";
+    document.getElementById("22").style.display = "block";
     document.getElementById("3").style.display = "block";
+    document.getElementById("23").style.display = "block";
     document.getElementById("4").style.display = "none";
+    document.getElementById("24").style.display = "none";
     document.getElementById("5").style.display = "none";
+    document.getElementById("25").style.display = "none";
     document.getElementById("6").style.display = "block";
+    document.getElementById("26").style.display = "block";
     document.getElementById("7").style.display = "none";
+    document.getElementById("27").style.display = "none";
     document.getElementById("9").style.display = "none";
+    document.getElementById("29").style.display = "none";
     document.getElementById("10").style.display = "none";
+    document.getElementById("30").style.display = "none";
     document.getElementById("11").style.display = "none";
+    document.getElementById("31").style.display = "none";
     document.getElementById("12").style.display = "none";
+    document.getElementById("32").style.display = "none";
     document.getElementById("BtnRegistrar").style.display = "block";
   }
 
   if (w=="crear") {
-    document.getElementById("1").style.display = "none";
-    document.getElementById("2").style.display = "none";
-    document.getElementById("3").style.display = "none";
-    document.getElementById("4").style.display = "none";
-    document.getElementById("5").style.display = "none";
-    document.getElementById("6").style.display = "none";
-    document.getElementById("7").style.display = "none";
-    document.getElementById("9").style.display = "none";
-    document.getElementById("10").style.display = "none";
-    document.getElementById("11").style.display = "none";
-    document.getElementById("12").style.display = "none";
-    document.getElementById("BtnRegistrar").style.display = "none";
+  document.getElementById("1").style.display = "none";
+  document.getElementById("21").style.display = "none";
+  document.getElementById("2").style.display = "none";
+  document.getElementById("22").style.display = "none";
+  document.getElementById("3").style.display = "none";
+  document.getElementById("23").style.display = "none";
+  document.getElementById("4").style.display = "none";
+  document.getElementById("24").style.display = "none";
+  document.getElementById("5").style.display = "none";
+  document.getElementById("25").style.display = "none";
+  document.getElementById("6").style.display = "none";
+  document.getElementById("26").style.display = "none";
+  document.getElementById("7").style.display = "none";
+  document.getElementById("27").style.display = "none";
+  document.getElementById("9").style.display = "none";
+  document.getElementById("29").style.display = "none";
+  document.getElementById("10").style.display = "none";
+  document.getElementById("30").style.display = "none";
+  document.getElementById("11").style.display = "none";
+  document.getElementById("31").style.display = "none";
+  document.getElementById("12").style.display = "none";
+  document.getElementById("32").style.display = "none";
+  document.getElementById("BtnRegistrar").style.display = "none";
   }
 
   if (w==1 || w==2) {
     document.getElementById("11").style.display = "block";
+    document.getElementById("31").style.display = "block";
     document.getElementById("2").style.display = "block";
+    document.getElementById("22").style.display = "block";
     document.getElementById("3").style.display = "block";
+    document.getElementById("23").style.display = "block";
     document.getElementById("6").style.display = "block";
+    document.getElementById("26").style.display = "block";
     document.getElementById("BtnRegistrar").style.display = "block";
     document.getElementById("1").style.display = "none";
+    document.getElementById("21").style.display = "none";
     document.getElementById("5").style.display = "none";
+    document.getElementById("25").style.display = "none";
     document.getElementById("4").style.display = "none";
+    document.getElementById("24").style.display = "none";
     document.getElementById("7").style.display = "none";
+    document.getElementById("27").style.display = "none";
     document.getElementById("9").style.display = "none";
+    document.getElementById("29").style.display = "none";
     document.getElementById("10").style.display = "none";
+    document.getElementById("30").style.display = "none";
     document.getElementById("12").style.display = "none";
+    document.getElementById("32").style.display = "none";
   }
 
   if (w==7) {
     document.getElementById("1").style.display = "none";
+    document.getElementById("21").style.display = "none";
     document.getElementById("2").style.display = "block";
+    document.getElementById("22").style.display = "block";
     document.getElementById("3").style.display = "block";
+    document.getElementById("23").style.display = "block";
     document.getElementById("4").style.display = "none";
+    document.getElementById("24").style.display = "none";
     document.getElementById("5").style.display = "none";
+    document.getElementById("25").style.display = "none";
     document.getElementById("6").style.display = "block";
+    document.getElementById("26").style.display = "block";
     document.getElementById("7").style.display = "block";
+    document.getElementById("27").style.display = "block";
     document.getElementById("9").style.display = "none";
+    document.getElementById("29").style.display = "none";
     document.getElementById("10").style.display = "block";
+    document.getElementById("30").style.display = "block";
     document.getElementById("11").style.display = "none";
+    document.getElementById("31").style.display = "none";
     document.getElementById("12").style.display = "none";
+    document.getElementById("32").style.display = "none";
     document.getElementById("BtnRegistrar").style.display = "block";
   }
 
   if (w==5) {
     document.getElementById("1").style.display = "block";
+    document.getElementById("21").style.display = "block";
     document.getElementById("2").style.display = "block";
+    document.getElementById("22").style.display = "block";
     document.getElementById("3").style.display = "block";
+    document.getElementById("23").style.display = "block";
     document.getElementById("4").style.display = "block";
+    document.getElementById("24").style.display = "block";
     document.getElementById("5").style.display = "none";
+    document.getElementById("25").style.display = "none";
     document.getElementById("6").style.display = "block";
+    document.getElementById("26").style.display = "block";
     document.getElementById("7").style.display = "none";
+    document.getElementById("27").style.display = "none";
     document.getElementById("9").style.display = "none";
+    document.getElementById("29").style.display = "none";
     document.getElementById("10").style.display = "none";
+    document.getElementById("30").style.display = "none";
     document.getElementById("11").style.display = "none";
+    document.getElementById("31").style.display = "none";
     document.getElementById("12").style.display = "none";
+    document.getElementById("32").style.display = "none";
     document.getElementById("BtnRegistrar").style.display = "block";
   }
 
    if (w==9) {
     document.getElementById("12").style.display = "block";
+    document.getElementById("31").style.display = "block";
     document.getElementById("2").style.display = "block";
+    document.getElementById("22").style.display = "block";
     document.getElementById("3").style.display = "block";
+    document.getElementById("23").style.display = "block";
     document.getElementById("6").style.display = "block";
+    document.getElementById("26").style.display = "block";
     document.getElementById("BtnRegistrar").style.display = "block";
     document.getElementById("1").style.display = "none";
+    document.getElementById("21").style.display = "none";
+    document.getElementById("21").style.display = "none";
     document.getElementById("5").style.display = "none";
+    document.getElementById("25").style.display = "none";
     document.getElementById("4").style.display = "none";
+    document.getElementById("24").style.display = "none";
     document.getElementById("7").style.display = "none";
+    document.getElementById("27").style.display = "none";
     document.getElementById("9").style.display = "none";
+    document.getElementById("29").style.display = "none";
     document.getElementById("10").style.display = "none";
+    document.getElementById("30").style.display = "none";
     document.getElementById("11").style.display = "none";
+    document.getElementById("31").style.display = "none";
   }
 }
 
@@ -280,8 +369,8 @@ function button(){
         }
         var titulo = document.getElementById("1").value;
         var plataforma = document.getElementById("9").value;
-        var tema = document.getElementById("10").value;
-        var idioma = document.getElementById("11").value;
+        var tema = document.getElementById("11").value;
+        var idioma = document.getElementById("10").value;
 
         if (titulo!="") {
          document.getElementById("19").value=titulo;
