@@ -2,6 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Login</title>
 	<link rel="stylesheet" href="view/plugins/materialize/css/materialize.min.css">
 	<link rel="stylesheet" href="view/css/main.css" type="text/css">
