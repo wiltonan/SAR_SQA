@@ -7,8 +7,7 @@
   require_once '../../model/connection.php';
   require_once '../../model/hoja_vida.php';
   $std=hoja_vida::mstrr_std();
- ?>
-9
+?>
 <link rel="stylesheet" type="text/css" href="../css/calendario.css">
 <div class="cdmc">
   <form class="form-horizontal" action="../../controller/hoja_vida.php" method="POST">
