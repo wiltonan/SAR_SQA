@@ -49,16 +49,9 @@
             </a>
 
             <ul class="dropdown-menu">
-
                               <li id="consul_capacidad">
                       <a href="#/consul_capacidad">
                         <i class="fa fa-search " aria-hidden="true" ></i>&nbsp;Consultar
-                      </a>
-                    </li>
-
-                    <li id="act_Capacidad">
-                      <a  href="#/act_Capacidad">
-                        <i class="fa fa-pencil " aria-hidden="true" ></i>&nbsp;Actualizar
                       </a>
                     </li>
 
