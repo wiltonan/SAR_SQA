@@ -37,27 +37,28 @@ $(document).ready(function(){
 	});
 
 
-		$('#consul_capacidad').click(function(){
-			$('#inicio').fadeOut();
-			$('.administrador').fadeIn();
-			$('.administrador').load("../sections/consul_capacidad.php");
-		});
+	$('#consul_capacidad').click(function(){
+		$('#inicio').fadeOut();
+		$('.administrador').fadeIn();
+		$('.administrador').load("../sections/consul_capacidad.php");
+	});
 
-		$('#act_Capacidad').click(function(){
-			$('#inicio').fadeOut();
-			$('.administrador').fadeIn();
-			$('.administrador').load("../sections/Act_Capacidad.php");
-		});
-		$('#consul_analista').click(function(){
-			$('#inicio').fadeOut();
-			$('.administrador').fadeIn();
-			$('.administrador').load("../sections/consul_analista.php");
-		});
-		$('#con_historico').click(function(){
-			$('#inicio').fadeOut();
-			$('.administrador').fadeIn();
-			$('.administrador').load("../sections/historico.php");
-		});
+	$('#act_Capacidad').click(function(){
+		$('#inicio').fadeOut();
+		$('.administrador').fadeIn();
+		$('.administrador').load("../sections/Act_Capacidad.php");
+	});
+	$('#consul_historico').click(function(){
+		$('#inicio').fadeOut();
+		$('.administrador').fadeIn();
+		$('.administrador').load("../sections/historico.php");
+	});
+
+	$('#con_historico').click(function(){
+		$('#inicio').fadeOut();
+		$('.administrador').fadeIn();
+		$('.administrador').load("../sections/historico.php");
+	});
 
 	$('#consultar_analista').click(function(){
 		$('#inicio').fadeOut();
@@ -102,26 +103,21 @@ $(document).ready(function(){
 function url(){
 	var URLhas = window.location.hash;
 
-		if(URLhas=="#/consul_capacidad"){
-			$('#inicio').fadeOut();
-			$('.administrador').fadeIn();
-			$('.administrador').load("../sections/consul_capacidad.php");
-		}
-		if(URLhas=="#/act_Capacidad"){
-			$('#inicio').fadeOut();
-			$('.administrador').fadeIn();
-			$('.administrador').load("../sections/Act_Capacidad.php");
-		}
-		if(URLhas=="#/consul_analista"){
-			$('#inicio').fadeOut();
-			$('.administrador').fadeIn();
-			$('.administrador').load("../sections/consul_analista.php");
-		}
-		if(URLhas=="#/consul_historico"){
-			$('#inicio').fadeOut();
-			$('.administrador').fadeIn();
-			$('.administrador').load("../sections/historico.php");
-		}
+	if(URLhas=="#/consul_capacidad"){
+		$('#inicio').fadeOut();
+		$('.administrador').fadeIn();
+		$('.administrador').load("../sections/consul_capacidad.php");
+	}
+	if(URLhas=="#/act_Capacidad"){
+		$('#inicio').fadeOut();
+		$('.administrador').fadeIn();
+		$('.administrador').load("../sections/Act_Capacidad.php");
+	}
+	if(URLhas=="#/consul_historico"){
+		$('#inicio').fadeOut();
+		$('.administrador').fadeIn();
+		$('.administrador').load("../sections/historico.php");
+	}
 
 	if(URLhas=="#/consultar"){
 		$('.administrador').fadeIn();

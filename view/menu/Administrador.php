@@ -49,27 +49,17 @@
             </a>
 
             <ul class="dropdown-menu">
-                              <li id="consul_capacidad">
-                      <a href="#/consul_capacidad">
-                        <i class="fa fa-search " aria-hidden="true" ></i>&nbsp;Consultar
-                      </a>
-                    </li>
+              <li id="consul_capacidad">
+        									<a href="#/consul_capacidad">
+        										<i class="fa fa-search " aria-hidden="true" ></i>&nbsp;Consultar
+        									</a>
+        								</li>
 
-                    <li id="consul_analista" class="dropdown">
-                      <a href="#/consul_analista" class="dropdown-toggle">
-                        <i class="fa fa-plus" aria-hidden="true"></i>&nbsp;Auditoria
-                      </a>
-                      <ul class="dropdown-menu">
-
-                        <li id="con_historico">
-                          <a href="#/consul_historico">
-                            <i class="fa fa-check-square-o" aria-hidden="true"></i>
-                            &nbsp;Historico
-                          </a>
-                        </li>
-
-                </ul>
-              </li>
+        								<li id="consul_historico" class="dropdown">
+        									<a href="#/consul_historico" class="dropdown-toggle">
+        										<i class="fa fa-eye" aria-hidden="true"></i>&nbsp;Auditoria
+        									</a>
+        								</li>
             </ul>
           </li>
 

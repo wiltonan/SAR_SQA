@@ -1,17 +1,15 @@
-<?php 
+<?php
 require_once'../../model/connection.php';
 require_once'../../model/capacidad.php';
 
 $reg=capacidad::Consulta_Historico();
 
 ?>
-              
-            <h1 id="info">Historico de informe de capacidad</h1>
+  <!-- <link rel="stylesheet" typ e="text/css" href="//cdn.datatables.net/1.10.13/css/dataTables.bootstrap.min.css">         -->
+            <center><h2 id="info" style="margin-top:-5px; margin-left:80px;">Historico</h2></center>
 
-<div id="bajar">
-
-
-            <table class="display" cellspacing="0" width="100%" id="example">
+<div id="bajar" style="margin-top:100px;">
+            <table class="display nowrap table table-striped table-bordered table-hover" cellspacing="0" width="100%" id="example">
 
                 <thead>
                     <tr>
@@ -23,15 +21,15 @@ $reg=capacidad::Consulta_Historico();
                         <th>Apellido anterior</th>
                         <th>Apellido actual</th>
                         <th>Factura ? anterior</th>
-                        <th>Factura ? actual</th>                           
+                        <th>Factura ? actual</th>
                         <th>Facturación anterior</th>
                         <th>Facturación actual</th>
                         <th>Ubicacion</th>
                         <th>Ubicacion</th>
                         <th>Observacion anterior</th>
                         <th>Observacion actual</th>
-                        
-                      
+
+
                     </tr>
                 </thead>
                 <tbody>
@@ -52,10 +50,10 @@ $reg=capacidad::Consulta_Historico();
                             <td><?php echo utf8_encode($regis[12]);?> </td>
                             <td><?php echo utf8_encode($regis[13]);?> </td>
                             <td><?php echo utf8_encode($regis[14]);?> </td>
-                            
-                            
 
-                       
+
+
+
                         <!--     <td>
                                 <a href="?hola=<?php echo $regis[13];?>">
                                 <i class="fa fa-address-book-o fa-2x" aria-hidden="true"></i>
@@ -68,21 +66,13 @@ $reg=capacidad::Consulta_Historico();
 
             </table>
             </div>
-
 <script type="text/javascript">
 $(document).ready(function() {
+      var table = $('#example').DataTable({
+      scrollX: true,
+      language: { search: "Buscar", processing: "Procesando...", lengthMenu: "Mostrar _MENU_ registros", zeroRecords: "No se encontraron resultados", emptyTable: 'Ningún registro encontrado', info: 'Mostrando <b>_START_</b> de <b>_END_</b> de un total de <b>_TOTAL_</b> registros', infoEmpty: 'Mostrando <b>0</b> de <b>0</b> de un total de <b>0</b> registros', infoFiltered: '(Filtrados de _MAX_ registros)', infoPostFix: '', paginate: { sPrevious: "Anterior", sNext: "Próximo" } }
 
-   $("#example").DataTable({
-    language: { paginate: { first: "Primera", previous: "Anterior",
-next: "Siguiente", last: "Anterior" }, processing: "Cargando datos...",
-lengthMenu: "Mostrar _MENU_ Entradas", info: "Se muestran 1 de _MAX_ de un total de _TOTAL_" ,
-infoEmpty: "Mostradas 0 de _MAX_ entradas", "infoFiltered": "(filtrada a partir de _MAX_ registro)",
-infoPostFix: "", loadingRecords: "Cargando...", "zeroRecords": "Ninguno encontrada - Disculpa :/",
-emptyTable: "No hay ninguna", search: "Buscar:" }
 });
-
-
-
 
 });
 </script>
