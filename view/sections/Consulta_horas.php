@@ -17,7 +17,7 @@ $extras = Horas_Extras::Extras();
       <br>
             <td ><?php echo utf8_encode($generar[1]);?></td>
             <br>
-            <button type="submit" id="Registrar" name="actual" value="Extras" class="btn btn-warning">Guardar</button>
+            <button type="submit" id="Registrarh" name="actual" value="Extras" class="btn btn-warning">Guardar</button>
             <button type="button" onclick="atras(<?php echo $generar[0];?>)" class="btn btn-warning" name="button">Atras</button>
            <center/>
         <table class="display" cellspacing="1" width="100%" height="60%" id="Tabla">
@@ -50,26 +50,26 @@ $extras = Horas_Extras::Extras();
                         <td></td>
                         <td><?php echo utf8_encode($generar[4]);?></td>
                       <td><?php echo utf8_encode($recargo[0]);?></td>
-                      <td><select class="form-control" name="Descripcion">
-                        <option value="">Seleccione</option>
+                      <td><select class="form-control select" name="Descripcion">
+                        <option value="AS">Seleccione</option>
                         <option value="">pagas</option>
-                      </select><input type="number" class="form-control" name="Cantidad_Horas" value=""></td>
-                      <td><select class="form-control" name="Descripcion">
-                        <option value="">Seleccione</option>
+                      </select><input type="number" class="form-control inputs" name="Cantidad_Horas" value=""></td>
+                      <td><select class="form-control select" name="Descripcion">
+                        <option value="AS">Seleccione</option>
                         <option value="">compensadas</option>
                       </select>
-                      <input type="number" class="form-control" name="Descripcion" value=""></td>
-                      <td><select class="form-control" name="Cantidad_Horas">
-                        <option value="">Seleccione</option>
+                      <input type="number" class="form-control inputs" name="Descripcion" value=""></td>
+                      <td><select class="form-control select" name="Cantidad_Horas">
+                        <option value="AS">Seleccione</option>
                         <option value="">por compensar</option>
                       </select>
-                      <input type="number" class="form-control" name="Cantidad_Horas" value=""></td>
-                      <td><select class="form-control" name="Descripcion">
-                        <option value="">Seleccione</option>
+                      <input type="number" class="form-control inputs" name="Cantidad_Horas" value=""></td>
+                      <td><select class="form-control select" name="Descripcion">
+                          <option value="AS">Seleccione</option>
                           <option value="">Pendientes</option>
                       </select>
-                      <input type="date"class="form-control" name="Fecha" value="">
-                      <input type="number " class="form-control" name="Cantidad_Horas" value=""></td>
+                      <input type="date"class="form-control inputs" name="Fecha" value="">
+                      <input type="number " class="form-control inputs" name="Cantidad_Horas" value=""></td>
 
                   </tr>
                 <?php  endforeach ?>
@@ -89,6 +89,34 @@ $extras = Horas_Extras::Extras();
        infoPostFix: "", loadingRecords: "Cargando...", "zeroRecords": "Ninguno dato encontrado",
        emptyTable: "No hay ningun dato", search: "Buscar:" }
     });
+
+    $("#Registrarh").click(function () {
+        $(".remove").remove();
+        var boo = 0;
+        var inputs = $(".inputs");
+        var selec = $(".select");
+        var input, selet;
+        var validar=true;
+
+        for (var i = 0; i < inputs.length; i++) {
+            if (inputs[i].value == "") {
+              boo++
+                input = $(inputs[i]);
+                input.focus().after("<div  style='font-size:15px;' class='remove'><font color='red'>Campo obligatorio</font><div>");  
+                validar=false;
+            }
+
+        }
+
+        for (var i = 0; i < selec.length; i++) {
+        if (selec[i].value == "AS") {
+            selet = $(selec[i]);
+            selet.focus().after("<div style='font-size:15px;' class='remove'><font color='red'>Campo obligatorio</font><div>");
+        } else {
+            boo++;
+        }
+    }
+        });
   });
 
 </script>

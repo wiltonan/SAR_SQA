@@ -7,7 +7,7 @@ $generar = Horas_Extras::Consulta_Horas($_GET["Consulta"]);
  ?>
  <script type="text/javascript">
       function Consulta(c) {
-        $(".administrador").load("../sections/Consulta_Horas1.php?Consulta="+c+"");
+        $(".administrador").load("../sections/Consulta_Horas.php?Consulta="+c+"");
      }
      function recargo(r) {
        $(".administrador").load("../sections/registrarrecargo.php?registro="+r+"");

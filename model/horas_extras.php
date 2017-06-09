@@ -54,6 +54,7 @@ public static function Analista(){
 
 //---------------------------------------------------------------------------------------------------------------------
      public static function recargo()
+
  {
        $pdo = ConexionBD::AbrirBD();
        $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);

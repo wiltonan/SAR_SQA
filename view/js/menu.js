@@ -74,7 +74,7 @@ $(document).ready(function(){
 	$('#Consulta_Horas').click(function(){
 		$('#inicio').fadeOut();
 		$('.administrador').fadeIn();
-		$('.administrador').load("../sections/Consulta_horas1.php");
+		$('.administrador').load("../sections/Consulta_horas.php");
 	});
 	$('#Registrar').click(function(){
 		$('#inicio').fadeOut();
@@ -159,7 +159,7 @@ function url(){
 	if(URLhas=="#/Consulta_Horas"){
 			$('#inicio').fadeOut();
 			$('.administrador').fadeIn();
-			$('.administrador').load("../sections/Consulta_horas1.php");
+			$('.administrador').load("../sections/Consulta_horas.php");
 		}
 	if(URLhas=="#/consultar_cliente"){
 		$('#inicio').fadeOut();

@@ -218,6 +218,6 @@
     <script type="text/javascript" src="../js/menuresponsive.js"></script>
     <script type="text/javascript" src="../js/dataTables.min.js"></script>
     <script type="text/javascript" src="../js/datepicker.js" ></script>
-
+    <script type="text/javascript" src="../js/horas_extras.js" ></script>
 	</body>
 </html>
