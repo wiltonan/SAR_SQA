@@ -1,4 +1,5 @@
       <div class="rgscliente">
+        <!-- se llama el conbtrolador para poder hacer el registro del cliente  -->
         <form action="../../controller/horas_extras.php" method="post">
           <div class="col-md-9 col-md-4" id="regcliente" style="margin-top:150px;">
             <center>
@@ -31,13 +32,16 @@
 
       <script type="text/javascript">
       $(document).on('ready', function () {
+
         $("#Registrarc").click(function () {
+            /* permite que no se repita la alerta de campo obligatorio*/
             $(".remove").remove();
+            /*declaracion de variables*/
             var boo = 0;
             var inputs = $(".inputs");
             var input, selet;
             var validar=true;
-
+            //se inicia el for para comprobar que el input no este vacio
             for (var i = 0; i < inputs.length; i++) {
                 if (inputs[i].value == "") {
                   boo++

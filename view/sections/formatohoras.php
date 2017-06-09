@@ -1,9 +1,12 @@
 <?php
+//se incluye la coneccion y el modelo
 require_once '../../model/connection.php';
   require_once '../../model/horas_extras.php';
+  /*Se llama la libreria del pdf*/
   require ('../plugins/pdf/fpdf.php');
-
+  /*se llama la consuolta por analista*/
   $generar = Horas_Extras::GenerarPDF($_GET["Consulta"]);
+  // se inicia la clase del pdf
           	class PDF extends FPDF
           	{
           		// Cabecera de página, mejor dicho la parte del titulo

@@ -1,4 +1,5 @@
 <?php
+//se incluye la coneccion y el modelo
 require_once '../../model/connection.php';
 require_once '../../model/horas_extras.php';
   $ver = Horas_Extras::Consulta_Horas($_GET["registro"]);
@@ -7,6 +8,7 @@ require_once '../../model/horas_extras.php';
   $pag = Horas_Extras::pagas();
 ?>
      <script type="text/javascript">
+     //funcion para diriguirce a otra paguina
          function atras(a) {
            $(".administrador").load("../sections/Consulta_Analista.php?atras="+a+"");
         }
@@ -53,6 +55,7 @@ require_once '../../model/horas_extras.php';
                           <label for="">tipo pagas</label>
                          <select class="form-control select" name="Descripcion1">
                            <option value="AS">seleccione</option>
+
                                  <?php foreach ($pag as $pagas) {
                                      if ($pag["Id_Tipo_Pago"] == $ver["Id_Tipo_Pago"]) {
                                        $selected = "selected";
@@ -86,6 +89,7 @@ require_once '../../model/horas_extras.php';
     </div>
     <script type="text/javascript">
       $(document).ready(function() {
+        //cambioi de lenguaje a la tabla de ingles a español
         $("#Tabla").DataTable({
           language: { paginate: { first: "Primera", previous: "Anterior",
           next: "Siguiente", last: "Anterior" }, processing: "Cargando datos...",
@@ -94,14 +98,18 @@ require_once '../../model/horas_extras.php';
            infoPostFix: "", loadingRecords: "Cargando...", "zeroRecords": "Ninguno dato encontrado",
            emptyTable: "No hay ningun dato", search: "Buscar:" }
         });
+        /*se genero las validaciones en los inputs como en el select y en los inpust*/
         $("#recarg").click(function () {
+          /* permite que no se repita la alerta de campo obligatorio*/
             $(".remove").remove();
+            /*declaracion de variables*/
             var boo = 0;
             var inputs = $(".inputs");
             var selec = $(".select");
-            var textarea = $(".textarea");
+            var textare = $(".textarea");
             var input, selet, text;
             var validar=true;
+            //se inicia el for para comprobar que el input no este vacio
             for (var i = 0; i < inputs.length; i++) {
                 if (inputs[i].value == "") {
                   boo++
@@ -110,14 +118,17 @@ require_once '../../model/horas_extras.php';
                     validar=false;
                 }
             }
-            for (var i = 0; i < text.length; i++) {
-                if (textarea[i].value == "") {
-                  boo++
-                  text = $(textarea[i]);
-                    text.focus().after("<div  style='font-size:15px;' class='remove'><font color='red'>Campo obligatorio</font><div>");  
-                    validar=false;
-                }
-            }e
+
+            // for (var i = 0; i < text.length; i++) {
+            //     if (textare[i].value == "") {
+            //       boo++
+            //       text = $(textare[i]);
+            //         text.focus().after("<div  style='font-size:15px;' class='remove'><font color='red'>Campo obligatorio</font><div>");  
+            //         validar=false;
+            //     }
+            // }
+
+            //for para validr si el usuario selecciono algo en el select
             for (var i = 0; i < selec.length; i++) {
             if (selec[i].value == "AS") {
                 selet = $(selet[i]);

@@ -2,6 +2,7 @@
 class Horas_Extras
 {
   // ---------------------------------------------------------------------------------------------------
+  // Consulta para mostrar todos los analistas que estan en la base de datos
     public static function Consulta_Analis(){
     $pdo = ConexionBD::AbrirBD();
     $pdo -> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
@@ -14,6 +15,8 @@ class Horas_Extras
    }
 
    // ---------------------------------------------------------------------------------------------------
+
+  //  consulta para mostrr las horas por cada analista
        public static function Consulta_Horas($Consultar){
          $pdo = ConexionBD::AbrirBD();
          $pdo -> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
@@ -70,6 +73,7 @@ public static function Analista(){
 
 
 //----------------------------------------------------------------------------------------------------
+//consulta donde muestra los datos de tipo pago
        public static function pagas(){
          $pdo = ConexionBD::AbrirBD();
          $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
@@ -83,12 +87,12 @@ public static function Analista(){
 
       //  ----------------------------------------------------------------------------------------------------
 
-      public static function Cliente(){
+      // consulta donde muestra solo el nombre de los clientes que existen
 
+      public static function Cliente(){
       $pdo = ConexionBD::AbrirBD();
       $pdo -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-      $sql ="SELECT Nombre_Cliente
-      FROM cliente";
+      $sql ="SELECT Nombre_Cliente FROM cliente";
       $query = $pdo -> prepare($sql);
       $query -> execute();
       $result = $query -> fetchAll(PDO::FETCH_BOTH);
@@ -97,6 +101,9 @@ public static function Analista(){
 }
 
       // ---------------------------------------------------------------------------------------------------
+
+      // Consulta para generar el pdf por cada analista 
+
        public static function GenerarPDF(){
 
        $pdo = ConexionBD::AbrirBD();

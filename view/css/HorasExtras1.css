@@ -1,32 +1,40 @@
+/* estilo para el formulario del registro del cliente*/
 #regcliente{
   position: absolute;
   left: 450px;
 }
+/* estuilo para el formulario de actualizar cliente*/
 .actcliente01{
   position: absolute;
   left: 450px;
   top: 250px;
 }
+/*
 #movercargo{
   position: absolute;
   left: 1000px;
-}
+}*/
+
+/*estilo para pocicionar el titulo del recargo*/
 #recar{
   position: absolute;
   top: 100px;
   left: 550px;
 }
+/*darle posicionamiento al formulario de registro recargo*/
 .container{
   position: absolute;
   top: 150px;
   left: 120px;
 }
+/*dar posicionamien al boton de registrar en el formulario registro recargo*/
 #recarg1{
 position: absolute;
   top: 350px;
   left: 500px;
 
 }
+/* dar posicionamiento al boton de atras en el formulario registro recargo*/
 #recarg2{
 position: absolute;
   top: 350px;
