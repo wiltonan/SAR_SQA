@@ -20,8 +20,8 @@
   <link rel="stylesheet" type="text/css" href="../css/datepicker.css">
     <link rel="stylesheet" type="text/css" href="../css/HorasExtras1.css">
 	</head>
-	<body style="background: #bbdefb;"  >
-		<div class="el_menu" style="background-color: green;">
+	<body>
+		<div class="el_menu" >
 			<header class="navar">
 				<div id="menu">
 
@@ -218,6 +218,5 @@
     <script type="text/javascript" src="../js/menuresponsive.js"></script>
     <script type="text/javascript" src="../js/dataTables.min.js"></script>
     <script type="text/javascript" src="../js/datepicker.js" ></script>
-    <script type="text/javascript" src="../js/horas_extras.js" ></script>
-	</body>
+    </body>
 </html>
