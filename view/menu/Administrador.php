@@ -9,6 +9,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+    <meta name="viewport" content="width=device−width, initial−scale=1.0" />
 		<meta charset="utf-8">
 		<title>Menu</title>
     <link rel="stylesheet" type="text/css" href="../plugins/bootstrap/css/bootstrap.css">
@@ -218,5 +219,6 @@
     <script type="text/javascript" src="../js/menuresponsive.js"></script>
     <script type="text/javascript" src="../js/dataTables.min.js"></script>
     <script type="text/javascript" src="../js/datepicker.js" ></script>
+  	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
     </body>
 </html>
