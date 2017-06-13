@@ -7,7 +7,8 @@ $accion =$_REQUEST['action'];
 switch ($accion) {
   case 'login':
     $usu = $_POST['txtusname'];
-    $pas = $_POST['txtkey'];
+    $usu1 = sha1($_POST['txtusname']);
+    $pas = crypt($_POST['txtkey'],$usu1);
     try {
       $resul = Validar::Login($usu,$pas);
       if ($usu=="" or $pas=="") {

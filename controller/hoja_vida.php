@@ -1,5 +1,3 @@
-<!-- cmMccp8_5ce-3QD0r6d_Lg -->
-
 <?php 
 	require_once '../model/connection.php';
 	require_once '../model/hoja_vida.php';
@@ -14,7 +12,8 @@
 			$cedu=$_POST['cdl'];
 			$lugar_expedicion="de ".ucwords($_POST['Lgr_xpdcn']);
 			$nick=$_POST['nck'];
-			$contra=$_POST['cntrsn'];
+			$nick1=sha1($_POST['nck']);
+			$contra=crypt($_POST['cntrsn'],$nick1);
 			$correo=$_POST['crr'];
 			$est='1';
 			try {
