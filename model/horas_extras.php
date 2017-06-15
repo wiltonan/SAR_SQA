@@ -8,7 +8,7 @@ class Horas_Extras
      public static function Consulta_Analis(){
      $pdo = ConexionBD::AbrirBD();
      $pdo -> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-     $sql="SELECT Id_Temporal_E,Analista,Empresa_Contrata,Fecha,Horas From temporal_extras  group by Analista";
+     $sql="call Consulta_Analista_g()";
      $query = $pdo->prepare($sql);
      $query -> execute();
      $result = $query->fetchAll(PDO::FETCH_BOTH);
@@ -50,7 +50,7 @@ class Horas_Extras
       public static function Recargo1(){
       $pdo = ConexionBD::AbrirBD();
       $pdo -> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-      $sql ="SELECT Cantidad_Horas FROM horas_extras";
+      $sql ="call horas_extras()";
       $query = $pdo->prepare($sql);
       $query -> execute();
       $result = $query->fetch(PDO::FETCH_BOTH);
@@ -64,7 +64,7 @@ class Horas_Extras
       public static function recargo(){
       $pdo = ConexionBD::AbrirBD();
       $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-      $sql="SELECT Descripcion FROM tipo_hora where Descripcion ='Recargo'";
+      $sql="call tipo_hora()";
       $query = $pdo->prepare($sql);
       $query -> execute();
       $result = $query->fetchAll(PDO::FETCH_BOTH);
@@ -78,7 +78,7 @@ class Horas_Extras
       public static function pagas(){
       $pdo = ConexionBD::AbrirBD();
       $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-      $sql="SELECT Descripcion FROM tipo_pago";
+      $sql="call pago()";
       $query = $pdo->prepare($sql);
       $query -> execute();
       $result = $query->fetchAll(PDO::FETCH_BOTH);
@@ -92,7 +92,7 @@ class Horas_Extras
       public static function Cliente(){
       $pdo = ConexionBD::AbrirBD();
       $pdo -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-      $sql ="SELECT Nombre_Cliente FROM cliente";
+      $sql ="call N_cliente()";
       $query = $pdo -> prepare($sql);
       $query -> execute();
       $result = $query -> fetchAll(PDO::FETCH_BOTH);
@@ -121,7 +121,7 @@ class Horas_Extras
       public static function Consulta_Cliente(){
       $pdo = ConexionBD::AbrirBD();
       $pdo -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-      $sql = "SELECT * From cliente";
+      $sql = "call cliente()";
       $query = $pdo -> prepare($sql);
       $query -> execute();
       $result = $query -> fetchAll(PDO::FETCH_BOTH);

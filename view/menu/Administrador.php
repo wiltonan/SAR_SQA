@@ -9,7 +9,6 @@
 <!DOCTYPE html>
 <html>
 	<head>
-    <meta name="viewport" content="width=device−width, initial−scale=1.0" />
 		<meta charset="utf-8">
 		<title>Menu</title>
     <link rel="stylesheet" type="text/css" href="../plugins/bootstrap/css/bootstrap.css">
@@ -27,18 +26,18 @@
 				<div id="menu">
 
 				<div class="inicio">
-					<i style="color:#EBE4D8;" class="fa fa-home fa-fw" onclick="inicio()"><a style="color:#EBE4D8;" href="#/inicio">Inicio</a></i>
+					<i   class="fa fa-home fa-fw" onclick="inicio()"><a  href="#/inicio">Inicio</a></i>
 				</div>
 
 					<div class="sesion">
-						<a style="color:#EBE4D8;" href="../../controller/login.controller.php?action=session" >Cerrar sesion</a>
+						<a  href="../../controller/login.controller.php?action=session" >Cerrar sesion</a>
 					</div>
 					<ul class="nav">
 						<li class="dropdown">
 
-							<div style="color:#EBE4D8;" class="menu">
-								<a style="color:#EBE4D8;" href="#!">Menu</a>
-								<i style="color:#EBE4D8;" class="caret"></i>
+							<div  class="menu">
+									<a id="main">Menu <b class="caret"></b></a>
+								<i  id="a13" class="caret"></i>
 							</div>
 
               <ul class="dropdown-menu">
@@ -219,6 +218,5 @@
     <script type="text/javascript" src="../js/menuresponsive.js"></script>
     <script type="text/javascript" src="../js/dataTables.min.js"></script>
     <script type="text/javascript" src="../js/datepicker.js" ></script>
-  	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
     </body>
 </html>

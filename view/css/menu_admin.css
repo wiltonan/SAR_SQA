@@ -11,6 +11,25 @@
   margin-right: 0px;
 }
 
+
+.caret {
+    color: #FAD98A;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 8px;
+  vertical-align: middle;
+  border-top: 4px solid;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+.caret.right {
+color: #FAD98A;
+  border-top: 0px solid transparent;
+  border-right: 0px solid transparent;
+  border-left: 0px solid;
+
+}
 .inicio{
 position: absolute;
 font-size: 25px;
@@ -18,18 +37,17 @@ top: 25px;
 }
 
 .inicio > a{
-	color: black;
+	color: white;
 	text-decoration: none;
 }
 .inicio > i{
-	color: green;
+	color: white;
 }
 
 .inicio > i > a {
-  color: black;
+  color: white;
   text-decoration: none;
 }
-
 
 .menu{
 position: absolute;
@@ -54,7 +72,7 @@ top: 25px;
 }
 
 .sesion > a{
-	color: black;
+	color: white;
 	text-decoration: none;
 }
 /*este esta pendiente ya que no hacen ningun cambio*/
@@ -207,3 +225,17 @@ top: 25px;
 	left: 160px;
   top: -120px;
 }/*------------------------------------------------------------------------------------------*/
+
+
+
+#a12{
+background: #EBE4D8;
+}
+
+#a13{
+background: #EBE4D8;
+}
+
+#main{
+  background: #EBE4D8;
+}
