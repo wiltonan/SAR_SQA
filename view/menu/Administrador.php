@@ -9,6 +9,10 @@
 <!DOCTYPE html>
 <html>
 	<head>
+<<<<<<< HEAD
+=======
+    <meta name="viewport" content="width=device−width, initial−scale=1.0"/>
+>>>>>>> 528bd6351a6e77c7fd19ca60400284560f5645ef
 		<meta charset="utf-8">
 		<title>Menu</title>
     <link rel="stylesheet" type="text/css" href="../plugins/bootstrap/css/bootstrap.css">
@@ -77,16 +81,12 @@
                   </a>
                 </li>
 
-
                 <li id="consultar_analista">
                   <a href="#/consultar_analista">
                     <i class="fa fa-search" aria-hidden="true"></i>
                     &nbsp;Consultar analista
                   </a>
                 </li>
-
-
-
 
 								<li id="consultar_cliente">
 									<a href="#/consultar_cliente">
