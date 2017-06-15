@@ -1,7 +1,7 @@
 <?php
 class ConexionBD{
 	private static $dbhost="localhost";//host
-	private static $dbname="sqa1";//nombre de la base de datos
+	private static $dbname="sqa";//nombre de la base de datos
 	private static $dbuser="root";//usuario
 	private static $dbpass="";//password
 
