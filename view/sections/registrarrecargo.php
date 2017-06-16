@@ -98,45 +98,46 @@ require_once '../../model/horas_extras.php';
            infoPostFix: "", loadingRecords: "Cargando...", "zeroRecords": "Ninguno dato encontrado",
            emptyTable: "No hay ningun dato", search: "Buscar:" }
         });
-        /*se genero las validaciones en los inputs como en el select y en los inpust*/
-        $("#recarg").click(function () {
-          /* permite que no se repita la alerta de campo obligatorio*/
-            $(".remove").remove();
-            /*declaracion de variables*/
-            var boo = 0;
-            var inputs = $(".inputs");
-            var selec = $(".select");
-            var textare = $(".textarea");
-            var input, selet, text;
-            var validar=true;
-            //se inicia el for para comprobar que el input no este vacio
-            for (var i = 0; i < inputs.length; i++) {
-                if (inputs[i].value == "") {
-                  boo++
-                    input = $(inputs[i]);
-                    input.focus().after("<div  style='font-size:15px;' class='remove'><font color='red'>Campo obligatorio</font><div>");  
-                    validar=false;
-                }
-            }
-
-            // for (var i = 0; i < text.length; i++) {
-            //     if (textare[i].value == "") {
-            //       boo++
-            //       text = $(textare[i]);
-            //         text.focus().after("<div  style='font-size:15px;' class='remove'><font color='red'>Campo obligatorio</font><div>");  
-            //         validar=false;
-            //     }
-            // }
-
-            //for para validr si el usuario selecciono algo en el select
-            for (var i = 0; i < selec.length; i++) {
-            if (selec[i].value == "AS") {
-                selet = $(selet[i]);
-                selet.focus().after("<div style='font-size:15px;' class='remove'><font color='red'>Campo obligatorio</font><div>");
-            } else {
-                boo++;
-            }
-        }
-            });
+        
+        // /*se genero las validaciones en los inputs como en el select y en los inpust*/
+        // $("#recarg").click(function () {
+        //   /* permite que no se repita la alerta de campo obligatorio*/
+        //     $(".remove").remove();
+        //     /*declaracion de variables*/
+        //     var boo = 0;
+        //     var inputs = $(".inputs");
+        //     var selec = $(".select");
+        //     var textare = $(".textarea");
+        //     var input, selet, text;
+        //     var validar=true;
+        //     //se inicia el for para comprobar que el input no este vacio
+        //     for (var i = 0; i < inputs.length; i++) {
+        //         if (inputs[i].value == "") {
+        //           boo++
+        //             input = $(inputs[i]);
+        //             input.focus().after("<div  style='font-size:15px;' class='remove'><font color='red'>Campo obligatorio</font><div>");  
+        //             validar=false;
+        //         }
+        //     }
+        //
+        //     // for (var i = 0; i < text.length; i++) {
+        //     //     if (textare[i].value == "") {
+        //     //       boo++
+        //     //       text = $(textare[i]);
+        //     //         text.focus().after("<div  style='font-size:15px;' class='remove'><font color='red'>Campo obligatorio</font><div>");  
+        //     //         validar=false;
+        //     //     }
+        //     // }
+        //
+        //     //for para validr si el usuario selecciono algo en el select
+        //     for (var i = 0; i < selec.length; i++) {
+        //     if (selec[i].value == "AS") {
+        //         selet = $(selet[i]);
+        //         selet.focus().after("<div style='font-size:15px;' class='remove'><font color='red'>Campo obligatorio</font><div>");
+        //     } else {
+        //         boo++;
+        //     }
+        // }
+        //     });
       });
     </script>

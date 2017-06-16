@@ -5,9 +5,9 @@ class ConexionBD{
 	private static $dbuser="root";//usuario
 	private static $dbpass="";//password
 
-	private static $conn=null;//variable que contiene la Conexion
+  private static $conn=null;//variable que contiene la Conexion
 
-//funcion para abrir la Conexion
+    //funcion para abrir la Conexion
 	public static function AbrirBD(){
 		if (self::$conn==null) {
 			try {

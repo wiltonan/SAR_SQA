@@ -29,8 +29,8 @@
           </form>
       </div>
       <script type="text/javascript" src="../js/jquery-1.10.2.js"></script>
-
-      <script type="text/javascript">
+      
+      <!-- <script type="text/javascript">
       $(document).on('ready', function () {
 
         $("#Registrarc").click(function () {
@@ -52,4 +52,4 @@
             }
             });
           });
-      </script>
+      </script> -->

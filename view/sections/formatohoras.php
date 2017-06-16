@@ -87,17 +87,17 @@ require_once '../../model/connection.php';
 
     		$pdf->Cell(38,6,'',1,0,'C');
     		$pdf->Cell(32,6,$row['horas'],1,1,'C');
-    		$pdf->Cell(20,6,'2',1,0,'C');
+    		$pdf->Cell(20,6,$row['horas'],1,0,'C');
     		$pdf->Cell(40,6,'',1,0,'C');
     		$pdf->Cell(30,6,$row['horas'],1,0,'C');
     		$pdf->Cell(32,6,'',1,0,'C');
 
     		$pdf->Cell(38,6,$row['horas'],1,0,'C');
-    		$pdf->Cell(32,6,'6',1,1,'C');
-    		$pdf->Cell(20,6,'3',1,0,'C');
-    		$pdf->Cell(40,6,'',1,0,'C');
-    		$pdf->Cell(30,6,'',1,0,'C');
-    		$pdf->Cell(32,6,'',1,0,'C');
+    		$pdf->Cell(32,6,$row['horas'],1,1,'C');
+    		$pdf->Cell(20,6,$row['horas'],1,0,'C');
+    		$pdf->Cell(40,6,$row['horas'],1,0,'C');
+    		$pdf->Cell(30,6,$row['horas'],1,0,'C');
+    		$pdf->Cell(32,6,$row['horas'],1,0,'C');
 
     		$pdf->Cell(38,6,'',1,0,'C');
     		$pdf->Cell(32,6,'',1,1,'C');

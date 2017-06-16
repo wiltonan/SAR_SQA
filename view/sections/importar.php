@@ -1,7 +1,4 @@
-
-
 <?php
-
 //conexiones, conexiones everywhere
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
@@ -9,7 +6,7 @@ $db_host = '127.0.0.1';
 $db_user = 'root';
 $db_pass = '';
 
-$database = 'sqadb';
+$database = 'sqa';
 $table = 'temporal_extras';
 if (!@mysql_connect($db_host, $db_user, $db_pass))
     die("No se pudo establecer conexión a la base de datos");

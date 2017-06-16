@@ -9,10 +9,6 @@
 <!DOCTYPE html>
 <html>
 	<head>
-<<<<<<< HEAD
-=======
-    <meta name="viewport" content="width=device−width, initial−scale=1.0"/>
->>>>>>> 528bd6351a6e77c7fd19ca60400284560f5645ef
 		<meta charset="utf-8">
 		<title>Menu</title>
     <link rel="stylesheet" type="text/css" href="../plugins/bootstrap/css/bootstrap.css">
@@ -20,55 +16,49 @@
     <link rel="stylesheet" type="text/css" href="../css/menu_admin.css">
     <link rel="stylesheet" type="text/css" href="../css/cv.css">
     <link rel="stylesheet" type="text/css" href="../css/scapacidad.css">
-  <link rel="stylesheet" type="text/css" href="../css/dataTables.min.css">
-  <link rel="stylesheet" type="text/css" href="../css/datepicker.css">
-    <link rel="stylesheet" type="text/css" href="../css/HorasExtras1.css">
+    <link rel="stylesheet" type="text/css" href="../css/dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/datepicker.css">
+    <link rel="stylesheet" type="text/css" href="../css/HorasExtras1.css">+
+    <link rel="stylesheet" type="text/css" href="../css/fileinput.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/fileinput-rtl.min.css">
 	</head>
 	<body>
 		<div class="el_menu" >
 			<header class="navar">
 				<div id="menu">
-
 				<div class="inicio">
 					<i   class="fa fa-home fa-fw" onclick="inicio()"><a  href="#/inicio">Inicio</a></i>
 				</div>
-
 					<div class="sesion">
 						<a  href="../../controller/login.controller.php?action=session" >Cerrar sesion</a>
 					</div>
 					<ul class="nav">
-						<li class="dropdown">
-
+						<li class="dropdown submenu">
 							<div  class="menu">
-									<a id="main">Menu <b class="caret"></b></a>
-								<i  id="a13" class="caret"></i>
+                <a href="#menu" class="dropdown-toggle">
+									<a id="menucolor" aria-hidden="true">Menu <b class="caret"></b></a>
 							</div>
-
               <ul class="dropdown-menu">
-
           <li class="dropdown">
             <a  class="dropdown-toggle">
               <i class="fa fa-book fa-fw" aria-hidden="true"></i>&nbsp;Informe capacidad
               <b class=""></b>
             </a>
-
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu submenu">
               <li id="consul_capacidad">
         									<a href="#/consul_capacidad">
         										<i class="fa fa-search " aria-hidden="true" ></i>&nbsp;Consultar
         									</a>
         								</li>
 
-        								<li id="consul_historico" class="dropdown">
+        								<li id="consul_historico" class="dropdown submenu">
         									<a href="#/consul_historico" class="dropdown-toggle">
         										<i class="fa fa-eye" aria-hidden="true"></i>&nbsp;Auditoria
         									</a>
         								</li>
             </ul>
           </li>
-
-          <li class="dropdown">
-
+          <li class="dropdown submenu">
 							<a  class="dropdown-toggle">
 								<i class="fa fa-clock-o" aria-hidden="true"></i>
 								&nbsp;Horas extras
@@ -104,14 +94,14 @@
 							</ul>
 						</li>
 
-          <li class="dropdown">
+          <li class="dropdown submenu">
 
             <a  class="dropdown-toggle">
               <i class="fa fa-address-card-o" aria-hidden="true"></i>
               &nbsp;Hoja de vida
             </a>
 
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu submenu">
               <li id="consultar">
                 <a href="#/consultar">
                   <i class="fa fa-download" aria-hidden="true"></i>
@@ -133,7 +123,7 @@
                 </a>
               </li>
 
-              <li class="dropdown">
+              <li class="dropdown submenu">
                 <a  class="dropdown-toggle">
                   <i class="fa fa-address-card-o" aria-hidden="true"></i>
                   &nbsp; Mis datos
@@ -199,8 +189,6 @@
                   </i>&nbsp;Registrar
                 </a>
               </li>
-
-
         </ul>
       </li>
     </ul>
@@ -218,5 +206,6 @@
     <script type="text/javascript" src="../js/menuresponsive.js"></script>
     <script type="text/javascript" src="../js/dataTables.min.js"></script>
     <script type="text/javascript" src="../js/datepicker.js" ></script>
+    <script type="text/javascript" src="../js/reponsiveprueba.js" ></script>
     </body>
 </html>
